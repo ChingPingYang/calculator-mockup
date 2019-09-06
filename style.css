@@ -1,0 +1,170 @@
+:root {
+    --dark: rgba(86, 86, 89, 1);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+button {
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 60px; 
+    height: 50px;
+    border-color: var(--dark);
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 242px;
+    height: 342px;
+    border: 0.5px solid var(--dark);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 12px 20px -5px rgba(0, 0, 0, 0.6);
+}
+
+
+header {
+    height: 20px;
+    width: 100%;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 0px 20px 0px;
+}
+
+header .nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+}
+header .nav-btn.cross {
+    background-color: rgb(252, 59, 59);
+}
+header .nav-btn.minus {
+    background-color: rgb(255, 190, 80);
+}
+header .nav-btn.plus {
+    background-color: rgb(33, 202, 88);
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    visibility: hidden;
+}
+header .nav-btn:hover a {
+    visibility: visible;
+}
+
+
+input {
+    border-style: none;
+    font-size: 3rem;
+    font-weight: 100;
+    width: 100%;
+    height: 70px;
+    background-color: var(--dark);
+    color: white;
+    text-align: end;
+    padding-right: 15px;
+}
+
+
+.main-button {
+    width: 240px; 
+    height: 250px; 
+    display: grid;   
+    grid-template-areas: "top-sec aside"
+                         "main aside"
+}
+
+section {
+    grid-area: top-sec;
+    display: grid;
+    grid-auto-flow: column;
+}
+section > button {
+    background-color: rgb(100, 100, 100);
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "b7 b8 b9"
+                         "b4 b5 b6"
+                         "b1 b2 b3"
+                         "b0 b0 d"
+}
+main > button {
+    background-color: rgb(138, 138, 138);
+}
+#b7 {
+    grid-area: b7;
+}
+#b8 {
+    grid-area: b8;
+}
+#b9 {
+    grid-area: b9;
+}
+#b4 {
+    grid-area: b4;
+}
+#b5 {
+    grid-area: b5;
+}
+#b6 {
+    grid-area: b6;
+}
+#b1 {
+    grid-area: b1;
+}
+#b2 {
+    grid-area: b2;
+}
+#b3 {
+    grid-area: b3;
+}
+#b0 {
+    width: auto; 
+    height: 50px;
+    grid-area: b0;
+    /* border: 1px solid red; */
+}
+#dot {
+    grid-area: d;
+}
+
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-auto-flow: row;
+}
+aside button {
+    background-color: rgb(255, 158, 58);
+}
