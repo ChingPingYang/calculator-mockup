@@ -1,7 +1,8 @@
 let operatora;
 let operatorb;
 let operation;
-let y = "hellow";
+let answer;
+
 
 const numberBtn = document.getElementsByClassName("numberBtn");
 
@@ -24,44 +25,73 @@ for (let i = 0; i < numberBtn.length; i++) {
 }
 
 
+
 reset.onclick = function(e) {
     clearAll();
 }
 
 mutiply.onclick = function(e) {
-    operation = "*";
-    operatora = total.value;
-    clearscreen();
-    checkInput()
+    if (operation !== undefined) {
+        operation = "*";
+    } else {
+        operation = "*";
+        operatora = total.value;
+        clearscreen();
+        checkInput()
+    }
 }
 plus.onclick = function(e) {
-    operation = "+";
-    operatora = total.value;
-    clearscreen();
-    checkInput()
+    if (operation !== undefined) {
+        operation = "+";
+    } else {
+        operation = "+";
+        operatora = total.value;
+        clearscreen();
+        checkInput()
+    }
 }
 divide.onclick = function(e) {
-    operation = "/";
-    operatora = total.value;
-    clearscreen();
-    checkInput()
+    if (operation !== undefined) {
+        operation = "/";
+    } else {
+        operation = "/";
+        operatora = total.value;
+        clearscreen();
+        checkInput()
+    }
 }
 minus.onclick = function(e) {
-    operation = "-";
-    operatora = total.value;
-    clearscreen();
-    checkInput()
+    if (operation !== undefined) {
+        operation = "-";
+    } else {
+        operation = "-";
+        operatora = total.value;
+        clearscreen();
+        checkInput()
+    }
 }
 modulo.onclick = function(e) {
-    operation = "%";
-    operatora = total.value;
-    clearscreen();
-    checkInput()
+    if (operation !== undefined) {
+        operation = "%";
+    } else {
+        operation = "%";
+        operatora = total.value;
+        clearscreen();
+        checkInput()
+    }
 }
 
 equal.onclick = function(e) {
-    operatorb = total.value;
-    calculate();
+    if (answer !== undefined) {
+        calculate();
+        answer = total.value;
+        operation = undefined;
+    } else {
+        operatorb = total.value;
+        calculate();
+        operation = undefined;
+        answer = total.value;
+    }
 }
 
 function checkInput() {
@@ -78,7 +108,9 @@ function clearAll() {
     clearscreen();
     operatora = 0;
     operatorb = 0;
-    operation = 0;
+    operation = undefined;
+    answer = undefined;
+    console.log(operation);
 }
 
 
@@ -102,4 +134,3 @@ function calculate() {
             break;
     }
 }
-
