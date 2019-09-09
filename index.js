@@ -19,7 +19,7 @@ const modulo = document.getElementById("modulo");
 //For Loop for adding number//
 for (let i = 0; i < numberBtn.length; i++) {
     numberBtn[i].onclick = function(e) {
-        checkInput()
+        checkInput();
         total.value = total.value + numberBtn[i].textContent;
     }
 }
@@ -28,7 +28,7 @@ for (let i = 0; i < numberBtn.length; i++) {
 
 reset.onclick = function(e) {
     clearAll();
-}
+};
 
 mutiply.onclick = function(e) {
     if (operation !== undefined) {
@@ -37,7 +37,7 @@ mutiply.onclick = function(e) {
         operation = "*";
         operatora = total.value;
         clearscreen();
-        checkInput()
+        checkInput();
     }
 }
 plus.onclick = function(e) {
@@ -47,7 +47,7 @@ plus.onclick = function(e) {
         operation = "+";
         operatora = total.value;
         clearscreen();
-        checkInput()
+        checkInput();
     }
 }
 divide.onclick = function(e) {
@@ -57,7 +57,7 @@ divide.onclick = function(e) {
         operation = "/";
         operatora = total.value;
         clearscreen();
-        checkInput()
+        checkInput();
     }
 }
 minus.onclick = function(e) {
@@ -67,7 +67,7 @@ minus.onclick = function(e) {
         operation = "-";
         operatora = total.value;
         clearscreen();
-        checkInput()
+        checkInput();
     }
 }
 modulo.onclick = function(e) {
@@ -77,7 +77,7 @@ modulo.onclick = function(e) {
         operation = "%";
         operatora = total.value;
         clearscreen();
-        checkInput()
+        checkInput();
     }
 }
 
@@ -134,3 +134,14 @@ function calculate() {
             break;
     }
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -107,9 +107,11 @@ section {
     grid-area: top-sec;
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
 }
 section > button {
     background-color: rgb(100, 100, 100);
+    width: auto;
 }
 
 main {
